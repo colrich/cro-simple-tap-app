@@ -1,0 +1,20 @@
+id: b8bcb9f6-c6b0-4102-b6c0-0922f2ceff5c
+timestamp: 2023-04-12T19:35:00Z
+username: colrich
+source: TanzuCLI
+accelerator:
+  name: tanzu-java-web-app
+  source:
+    image: registry.tanzu.vmware.com/tanzu-application-platform/tap-packages@sha256:28e34f0cbf0de2c6f317ea870caf21b79aa52a5359c28666a6ceec90184eb409
+fragments:
+  - name: build-wrapper-maven
+    source:
+      image: registry.tanzu.vmware.com/tanzu-application-platform/tap-packages@sha256:195a3ca6585fa91c41292584a19c2807c72ecdf986ce860a7147451e89d467d4
+  - name: java-version
+    source:
+      image: registry.tanzu.vmware.com/tanzu-application-platform/tap-packages@sha256:fa976ccf1609cb69e74a0162f0f49581fd0d393003e2fbe5d54d12eae62b4ff9
+  - name: tap-workload
+    source:
+      image: registry.tanzu.vmware.com/tanzu-application-platform/tap-packages@sha256:dbf0dedb6848ad8a7704c1c19465a1ddae9039b0e63c1dd0df3e2ed9cbda6093
+options:
+  projectName: cro-simple-tap-app
